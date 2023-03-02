@@ -129,12 +129,12 @@ footer {
   width: 100%;
   color: #dbdbdb;
 }
-.divFooter {
+.divInfo {
     display: flex;
     justify-content: center;
     margin: 3%;
 }
-.footerSection {
+.infoSection {
     width: 25%;
     margin: auto;
     display: flex;
@@ -163,6 +163,27 @@ ul {
 
 ul li {
     padding: 2%;
+}
+.socialSection {
+    background-color: #dbdbd9;
+    height: 80px;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.socialBtns {
+    background-color: #dbdbd9;
+    border: 1px solid black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.7rem;
+}
+.footerSocial {
+    background-color: #dbdbd9;
 }
 
 </style>
@@ -204,8 +225,16 @@ ul li {
 </div>
 
 <footer>
-    <div class="divFooter">
-        <div class="footerSection">
+    <div class="footerSocial">
+        <div class="socialSection">
+            <button class="socialBtns">FACEBOOK</button>
+            <button class="socialBtns">INSTAGRAM</button>
+            <button class="socialBtns">NYHETSBREV</button>
+        </div>
+    </div>
+    
+    <div class="divInfo">
+        <div class="infoSection">
             <ul>
                 <li class="listHead">SHOP</li>
                 <li>Herr</li>
@@ -215,7 +244,7 @@ ul li {
             </ul>
         </div>
 
-        <div class="footerSection">
+        <div class="infoSection">
             <ul>
                 <li class="listHead">KUNDSERVICE</li>
                 <li>Order</li>
@@ -225,7 +254,7 @@ ul li {
             </ul>
         </div>
 
-        <div class="footerSection" style="margin: 0;">
+        <div class="infoSection" style="margin: 0;">
             <ul>
                 <li class="listHead">KONTAKT</li>
                 <li class="listContact">KONTAKTUPPGIFTER</li>
@@ -235,7 +264,7 @@ ul li {
         </div>
     
 
-        <div class="footerSection">
+        <div class="infoSection">
             <ul>
                 <li class="listContact">VISTRÖM WEBB AB</li>
                 <li>KUNGSGATAN 9</li>
