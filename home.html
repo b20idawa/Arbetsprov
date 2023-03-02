@@ -36,6 +36,8 @@ body {
   display: none;
 }
 
+
+
 @media screen and (max-width: 600px) {
     .navBar a {
         display: none;
@@ -64,6 +66,8 @@ body {
     text-align: left;
   }
 }
+
+
 
 .logo {
     width: 100px;
@@ -104,6 +108,58 @@ body {
     color: #dbdbdb;
     text-decoration: none;
 }
+
+@media screen and (max-width: 450px) {
+    .topBar {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .topBarEnd, .topBarStart{
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+footer {
+  background-color: #1a1919;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: #dbdbdb;
+}
+.divFooter {
+    display: flex;
+    justify-content: center;
+}
+.footerSection {
+    width: 25%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.6rem;
+}
+ul > :first-child{
+    font-size: 0.8rem;
+    font-weight: 600;
+    
+}
+ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 50%;
+  
+}
+
+ul li {
+    padding: 2%;
+}
+
 </style>
 </head>
 <body>
@@ -142,7 +198,48 @@ body {
   </a>
 </div>
 
+<footer>
+    <div class="divFooter">
+        <div class="footerSection">
+            <ul>
+                <li class="listHead">SHOP</li>
+                <li>Herr</li>
+                <li>Dam</li>
+                <li>Märken</li>
+                <li>Rea</li>
+            </ul>
+        </div>
 
+        <div class="footerSection">
+            <ul>
+                <li class="listHead">KUNDSERVICE</li>
+                <li>Order</li>
+                <li>Betalning</li>
+                <li>Frakt & Leverans</li>
+                <li>Returer</li>
+            </ul>
+        </div>
+
+        <div class="footerSection" style="margin: 0;">
+            <ul>
+                <li class="listHead">KONTAKT</li>
+                <li>KONTAKTUPPGIFTER</li>
+                <li>TEL: 0700 00 00 00</li>
+                <li>E-POST: info@foretaget.se</li>
+            </ul>
+        </div>
+    
+
+        <div class="footerSection">
+            <ul>
+                <li>VISTRÖM WEBB AB</li>
+                <li>KUNGSGATAN 9</li>
+                <li>541 31 SKÖVDE</li>
+            </ul>
+        </div>
+    </div>
+    
+</footer>
 <script>
 function navBarFunction() {
   var x = document.getElementById("nav");
