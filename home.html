@@ -283,6 +283,51 @@ input[type=submit] {
     cursor: pointer;
 }
 
+
+.card p {
+    margin: 2%;
+}
+.card {
+    max-width: 200px;
+    margin: auto;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card h4 {
+    font-size: 0.7rem;
+    margin-bottom: 2%;
+}
+.cardDescription {
+    font-size: 0.7rem;
+    width: 80%;
+    text-align: center;
+    opacity: 50%;
+}
+
+.price {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.products {
+    max-width: 80%;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+    margin-top: 5%;
+}
+
+
+@media (min-width: 600px) {
+    .products { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 900px) {
+    .products { grid-template-columns: repeat(4, 1fr); }
+}
 </style>
 </head>
 <body>
@@ -320,6 +365,37 @@ input[type=submit] {
     <i class="fa fa-bars"></i>
   </a>
 </div>
+
+<div class="products">
+    <div class="card new">
+        <img src="bild1.jpeg" alt="" style="width:100%">
+        <h4>HACKETT LONDON</h4>
+        <p class="cardDescription">Hacket Garment Dyed Oxford Slim Fit Shirt White</p>
+        <p class="price">999 kr</p>
+    </div>
+
+    <div class="card">
+        <img src="bild2.jpeg" alt="" style="width:100%">
+        <h4>HACKETT LONDON</h4>
+        <p class="cardDescription">Hacket Garment Dyed Oxford Slim Fit Shirt White</p>
+        <p class="price">999 kr</p>
+    </div>
+
+    <div class="card">
+        <img src="bild3.jpeg" alt="" style="width:100%">
+        <h4>HACKETT LONDON</h4>
+        <p class="cardDescription">Hacket Garment Dyed Oxford Slim Fit Shirt White</p>
+        <p class="price sale">999 kr</p>
+    </div>
+
+    <div class="card">
+        <img src="bild4.jpeg" alt="" style="width:100%">
+        <h4>HACKETT LONDON</h4>
+        <p class="cardDescription">Hacket Garment Dyed Oxford Slim Fit Shirt White</p>
+        <p class="price">999 kr</p>
+    </div>
+</div>
+
 
 <div class="newsletterDiv">
     <img src="newsletter_bg.jpeg" alt="" style="width:80%;">
