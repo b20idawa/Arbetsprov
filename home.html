@@ -319,7 +319,23 @@ input[type=submit] {
     gap: 1rem;
     margin-top: 5%;
 }
-
+.cardInfo{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.sales p {
+    text-decoration: line-through;
+}
+.sales::after { 
+  content: " 799 kr";
+  color: red;
+  font-weight: bolder;
+  
+  
+  
+} 
 
 @media (min-width: 600px) {
     .products { grid-template-columns: repeat(2, 1fr); }
@@ -367,32 +383,45 @@ input[type=submit] {
 </div>
 
 <div class="products">
-    <div class="card new">
+    <div class="card">
         <img src="bild1.jpeg" alt="" style="width:100%">
         <h4>HACKETT LONDON</h4>
+        
         <p class="cardDescription">Hacket Garment Dyed Oxford Slim Fit Shirt White</p>
-        <p class="price">999 kr</p>
+        <div class="cardInfo">
+            <p class="price">999 kr</p>
+        </div>
+        
     </div>
 
     <div class="card">
         <img src="bild2.jpeg" alt="" style="width:100%">
         <h4>HACKETT LONDON</h4>
+        
         <p class="cardDescription">Hacket Garment Dyed Oxford Slim Fit Shirt White</p>
-        <p class="price">999 kr</p>
+        <div class="cardInfo">
+            <p class="price">999 kr</p>
+        </div>
     </div>
 
     <div class="card">
         <img src="bild3.jpeg" alt="" style="width:100%">
         <h4>HACKETT LONDON</h4>
+        
         <p class="cardDescription">Hacket Garment Dyed Oxford Slim Fit Shirt White</p>
-        <p class="price sale">999 kr</p>
+        <div class="cardInfo"> 
+            <p class="price sale">999 kr</p>    
+        </div>
     </div>
 
     <div class="card">
         <img src="bild4.jpeg" alt="" style="width:100%">
         <h4>HACKETT LONDON</h4>
+        
         <p class="cardDescription">Hacket Garment Dyed Oxford Slim Fit Shirt White</p>
-        <p class="price">999 kr</p>
+        <div class="cardInfo">
+            <p class="price">999 kr</p>
+        </div>
     </div>
 </div>
 
@@ -470,14 +499,23 @@ input[type=submit] {
     <p class="copyrightText">VISTRÖM WEBB AB &copy; 2017. ALLA RÄTTIGHETER RESERVERADE</p>
 </footer>
 <script>
-function navBarFunction() {
-  var x = document.getElementById("nav");
-  if (x.className === "navBar") {
-    x.className += " responsive";
-  } else {
-    x.className = "navBar";
-  }
-}
+    function navBarFunction() {
+        var x = document.getElementById("nav");
+        if (x.className === "navBar") {
+            x.className += " responsive";
+        } else {
+            x.className = "navBar";
+        }
+    }
+
+
+    const sale = document.getElementsByClassName("cardInfo")[1];
+    sale.classList.toggle("sales");
+
+
+
+
+
 </script>
 
 </body>
