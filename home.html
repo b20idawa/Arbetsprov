@@ -288,7 +288,6 @@ input[type=submit] {
     margin: 2%;
 }
 .card {
-    max-width: 200px;
     margin: auto;
     text-align: center;
     height: 100%;
@@ -317,7 +316,7 @@ input[type=submit] {
     margin: 0 auto;
     display: grid;
     gap: 1rem;
-    margin-top: 5%;
+    position: relative;
 }
 .cardInfo{
     display: flex;
@@ -331,12 +330,25 @@ input[type=submit] {
 .sales::after { 
   content: " 799 kr";
   color: red;
-  font-weight: bolder;
-  
-  
-  
+  font-weight: bolder; 
 } 
 
+.productHead {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 0.8rem;
+    margin-bottom: 1%; 
+    color: #404040;
+}
+.productHeadRight {
+    display: flex;
+    justify-content: flex-end;
+    width: 220px;
+    align-items: center;
+   
+}
 @media (min-width: 600px) {
     .products { grid-template-columns: repeat(2, 1fr); }
 }
@@ -382,6 +394,17 @@ input[type=submit] {
   </a>
 </div>
 
+<div class="productHead">
+    <div>
+        <p>MER FRÅN HACKET LONDON</p>
+    </div>
+   <div class="productHeadRight">
+    <p style="margin-right: 10%;">SE ALLA HACKET PRODUKTER</P>
+    <p style="font-size: 1rem;">&rang;</P>
+    </p>
+   </div>
+    
+</div>
 <div class="products">
     <div class="card">
         <img src="bild1.jpeg" alt="" style="width:100%">
@@ -511,11 +534,6 @@ input[type=submit] {
 
     const sale = document.getElementsByClassName("cardInfo")[1];
     sale.classList.toggle("sales");
-
-
-
-
-
 </script>
 
 </body>
