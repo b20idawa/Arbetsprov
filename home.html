@@ -132,15 +132,18 @@ footer {
   color: #dbdbdb;
 }
 .divInfo {
-    display: flex;
+    display: grid;
+    gap: 1rem;
+    position: relative;
     justify-content: center;
     width: 80%;
     margin: auto;
     margin-top: 4%;
     margin-bottom: 3%;
+    
 }
 .infoSection {
-    width: 25%;
+    width: 100%;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -449,12 +452,29 @@ input[type=submit] {
     width: 100%;
 }
 
-@media (min-width: 600px) {
-    .products { grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 200px) {
+    .divInfo {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
+@media (min-width: 600px) {
+    .products { 
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .divInfo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
 @media (min-width: 900px) {
-    .products { grid-template-columns: repeat(4, 1fr); }
+    .products { 
+        grid-template-columns: repeat(4, 1fr); 
+    }
+    .divInfo {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 </style>
 </head>
