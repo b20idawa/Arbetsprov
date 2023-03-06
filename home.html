@@ -344,6 +344,7 @@ input[type=submit] {
     font-size: 0.8rem;
     margin-bottom: 1%; 
     color: #404040;
+    align-items: center;
 }
 .productHeadRight {
     display: flex;
@@ -433,6 +434,19 @@ input[type=submit] {
 .stock {
     margin-right: 2%;
     margin-top: 1%;
+}
+.cardNew, .cardSale{
+    position: absolute;
+    display: flex;
+    background-color: black;
+    color: white;
+    padding: 1%;
+    width: 70px;
+    font-size: 0.8rem;
+    justify-content: center;
+}
+.cardNew-container, .cardSale-container {
+    width: 100%;
 }
 
 @media (min-width: 600px) {
@@ -549,6 +563,9 @@ input[type=submit] {
 </div>
 <div class="products">
     <div class="card">
+        <div class="cardNew-container">
+            <p style="margin: 0;" class="cardNew">NYHET</p>
+        </div>
         <img src="bild1.jpeg" alt="" style="width:100%">
         <h4>HACKETT LONDON</h4>
         
@@ -560,6 +577,9 @@ input[type=submit] {
     </div>
 
     <div class="card">
+        <div class="cardSale-container">
+            <p style="margin: 0;" class="cardSale">KAMPANJ</p>
+        </div>
         <img src="bild2.jpeg" alt="" style="width:100%">
         <h4>HACKETT LONDON</h4>
         
