@@ -16,7 +16,9 @@ p{
     overflow: hidden;
     display: flex;
     justify-content: center;
+    align-items: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 1%;
 }
 
 .navBar a {
@@ -26,7 +28,7 @@ p{
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
 }
 
 .navBar a:hover {
@@ -34,49 +36,25 @@ p{
   color: black;
 }
 
-
 .navBar .icon {
   display: none;
 }
 
 
 
-@media screen and (max-width: 600px) {
-    .navBar a {
-        display: none;
-        font-size: 1.3rem;;
-    }
-    .navBar{
-        display: block;
-    }
-    .navBar a.icon {
-        float: right;
-        display: block;
-    }
-    
-}
-
-@media screen and (max-width: 600px) {
-  .navBar.responsive {position: relative;}
-  .navBar.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .navBar.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-
-
-
-.logo {
-    width: 100px;
+#logo {
     display: flex;
     justify-content: center;
+    border: 1px solid black;
+    padding: 5px;
+    width: 250px;
+    font-size: 1.4rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: lightgrey;
 }
+
+
 .topBar {
     display: flex;
     justify-content: space-between;
@@ -323,6 +301,7 @@ input[type=submit] {
     display: grid;
     gap: 1rem;
     position: relative;
+    margin-bottom: 5%;
 }
 .cardInfo{
     display: flex;
@@ -451,6 +430,13 @@ input[type=submit] {
 .cardNew-container, .cardSale-container {
     width: 100%;
 }
+.logoSwitch {
+    display: none !important;
+}
+
+.test {
+    display: block;
+}
 
 @media (min-width: 200px) {
     .divInfo {
@@ -475,6 +461,38 @@ input[type=submit] {
     .divInfo {
         grid-template-columns: repeat(4, 1fr);
     }
+}
+@media screen and (max-width: 850px) {
+    .navBar a {
+        display: none;
+        font-size: 1.3rem;;
+    }
+    .navBar{
+        display: block;
+    }
+    .navBar a.icon {
+        float: right;
+        display: block;
+    }
+    #logo {
+        font-size: 0.8rem;
+        width: 200px;
+        
+    }   
+}
+
+@media screen and (max-width: 850px) {
+  .navBar.responsive {position: relative;}
+  .navBar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navBar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }
 </style>
 </head>
@@ -506,11 +524,11 @@ input[type=submit] {
   <a href="#dam">DAM</a>
   <a href="#marken">MÄRKEN</a>
   <a href="#rea">REA</a>
-  <div class="logo">Logo</div>
+  <a id="logo" class="test"><p>LOGO</p></a>
   <a href="#sok">SÖK</a>
   <a href="#lista">LISTA</a>
   <a href="#kundkorg">KUNDKORG</a>
-  <a onclick="navBarFunction()" class="icon">
+  <a onclick="navBarFunction();" class="icon">
     <i class="fa fa-bars"></i>
   </a>
 </div>
@@ -711,7 +729,10 @@ input[type=submit] {
         } else {
             x.className = "navBar";
         }
+        document.getElementById("logo").classList.toggle("logoSwitch");
+        
     }
+    
 
 
     var sale = document.getElementsByClassName("cardInfo")[1];
