@@ -223,12 +223,20 @@ footer p {
 }
 .newsletterHeading {
     font-size: 1.5rem;
+    margin-bottom: 1%;
+    margin-top: 0;
+}
+.newsletterText{
+    width: 70%;
+    margin: 0 auto;
 }
 
 .newsletterDiv {
   position: relative;
   text-align: center;
   color: white;
+  width: 80%;
+    margin: 0 auto;
   margin-bottom: 3%;
 }
 
@@ -241,17 +249,37 @@ footer p {
 
 .newsletterLeft {
     position: absolute;
-    bottom: 40%;
-    left: 20%;
-    width: 300px;
     font-size: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.left{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.right{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 input[type=text], select {
     width: 35%;
-    padding: 10px 10px;
+    padding: 12px 10px;
     border: none;
     box-sizing: border-box;
+    font-size: 0.7rem;
 }
 
 ::placeholder {
@@ -265,6 +293,7 @@ input[type=submit] {
     margin: 8px 0;
     border: none;
     cursor: pointer;
+    width: 100px;
 }
 
 
@@ -478,7 +507,40 @@ input[type=submit] {
         font-size: 0.8rem;
         width: 200px;
         
-    }   
+    } 
+    input[type=submit] {
+        padding: 11px 10px;
+        width: 70px;
+        width: 50%;
+        margin-top: 0;
+    }
+    input[type=text], select {
+        padding: 13px 10px;
+        font-size: 0.6rem;
+        width: 50%;
+    }
+    .newsletterHeading{
+        font-size: 1rem;
+        margin-bottom: 1%;
+    }
+    .newsletterText{
+        font-size: 0.5rem;
+    }
+    .right{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
+@media screen and (max-width: 500px){
+    input[type=submit] {
+        padding: 4px
+    }
+    input[type=text], select{
+        padding: 8px 10px;
+        font-size: 0.4rem;
+    }
 }
 
 @media screen and (max-width: 850px) {
@@ -650,17 +712,21 @@ input[type=submit] {
 
 
 <div class="newsletterDiv">
-    <img src="newsletter_bg.jpeg" alt="" style="width:80%;">
+   
     <div class="newsletterLeft">
-        <p class="newsletterHeading">FA DET SENASTE</p>
-        Join our mailing list to stay up to date on new arrivals, promotions and all things
-    </div>
-    <div class="newsletterRight">
-        <form action="">
+        <div class="left">
+            <p class="newsletterHeading">FA DET SENASTE</p>
+            <p class="newsletterText">Join our mailing list to stay up to date on new arrivals, promotions and all things</p>
+        </div>
+        
+        
+        <form action="" class="right">
             <input type="text" name="signUp" placeholder="E-POSTADRESS">
             <input type="submit" value="Skicka">
         </form> 
     </div> 
+   
+    <img src="newsletter_bg.jpeg" alt="" style="width:100%;"> 
 </div>
 
 
