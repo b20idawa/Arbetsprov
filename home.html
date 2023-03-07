@@ -368,10 +368,13 @@ input[type=submit] {
     display: flex;
     margin-bottom: 5%;
 }
+.mainProductLeft {
+    width: 50%;
+}
 .mainProductRight {
     text-align: center;
     margin: 0 auto; 
-    width: 100%;
+    width: 50%;
 }
 .size {
     display: flex;
@@ -415,10 +418,17 @@ input[type=submit] {
 }
 .dropBtn{
     display: flex;
-    background: none;
     border: none;
     width: 100%;
     justify-content: space-between;
+    background: none;
+    color: black;
+    padding: 10px;
+    border-top: 1px solid #17181f;
+    opacity: 50%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    align-items: center;
 }
 
 .dropdown-content{
@@ -556,6 +566,9 @@ input[type=submit] {
     text-align: left;
   }
 }
+@media screen and (max-width: 1300px) {
+
+}
 </style>
 </head>
 <body>
@@ -596,7 +609,10 @@ input[type=submit] {
 </div>
 
 <div class="mainProduct">
-    <img src="main.jpeg" alt="" style="width:50%">
+    <div class="mainProductLeft">
+        <img src="main.jpeg" alt="" style="width:100%">
+    </div>
+   
     <div class="mainProductRight">
         <div class="productDetails">
             <p class="new">Nyhet</p>
@@ -617,31 +633,24 @@ input[type=submit] {
             <p>ARTIKELNUMMER:</p>
             <p> HM3049975AL</p>
         </div>
-        <hr class="hrMain" size= "1" color= "#17181f">
         <div class="dropDown">
-            <button class="dropBtn" onclick="showDescription();">PRODUKTBESKRIVNING<i class="fa fa-angle-down" style="font-size:25px"></i></button>
-            <div id="dropdown-description" class="dropdown-content">
+            <button class="dropBtn">PRODUKTBESKRIVNING<i class="fa fa-angle-down" style="font-size:25px"></i></button>
+            <div class="dropdown-content">
              Detta är lite text som berättar om produkten
             </div>
-        </div>
-        <hr class="hrMain" size= "1" color= "#17181f">
-        <div class="dropDown">
-            <button class="dropBtn" onclick="showSize();">STORLEK & PASSFORM<i class="fa fa-angle-down" style="font-size:25px"></i></button>
-            <div id="dropdown-size" class="dropdown-content">
+        
+            <button class="dropBtn">STORLEK & PASSFORM<i class="fa fa-angle-down" style="font-size:25px"></i></button>
+            <div class="dropdown-content">
              Detta är lite text som berättar om produkten
             </div>
-        </div>
-        <hr class="hrMain" size= "1" color= "#17181f">
-        <div class="dropDown">
-            <button class="dropBtn" onclick="showWash();">TVÄTT & SKÖTSELRÅD<i class="fa fa-angle-down" style="font-size:25px"></i></button>
-            <div id="dropdown-wash" class="dropdown-content">
+        
+            <button class="dropBtn">TVÄTT & SKÖTSELRÅD<i class="fa fa-angle-down" style="font-size:25px"></i></button>
+            <div  class="dropdown-content">
              Detta är lite text som berättar om produkten
             </div>
-        </div>
-        <hr class="hrMain" size= "1" color= "#17181f">
-        <div class="dropDown">
-            <button class="dropBtn" onclick="showDelivery();">LEVERNAS & RETUR<i class="fa fa-angle-down" style="font-size:25px"></i></button>
-            <div id="dropdown-delivery" class="dropdown-content">
+       
+            <button class="dropBtn">LEVERNAS & RETUR<i class="fa fa-angle-down" style="font-size:25px"></i></button>
+            <div class="dropdown-content">
              Detta är lite text som berättar om produkten
             </div>
         </div>
@@ -800,42 +809,21 @@ input[type=submit] {
     }
     
 
+    var accordion = document.getElementsByClassName("dropBtn");
+    var i;
 
-    var sale = document.getElementsByClassName("cardInfo")[1];
-    sale.classList.toggle("sales");
-
-    function showDescription(){
-        var description = document.getElementById("dropdown-description").classList.toggle("showDrop");
-
-        var wash = document.getElementById("dropdown-wash").classList.remove("showDrop");
-
-        var delivery = document.getElementById("dropdown-size").classList.remove("showDrop");
-
-        var delivery = document.getElementById("dropdown-delivery").classList.remove("showDrop");
+    for (i = 0; i < accordion.length; i++) {
+        accordion[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
     }
-          
     
-
-    function showSize(){
-        var size = document.getElementById("dropdown-size").classList.toggle("showDrop");
-        var wash = document.getElementById("dropdown-wash").classList.remove("showDrop");
-        var delivery = document.getElementById("dropdown-delivery").classList.remove("showDrop");
-        var description = document.getElementById("dropdown-description").classList.remove("showDrop");
-    }
-
-    function showWash(){
-        var wash = document.getElementById("dropdown-wash").classList.toggle("showDrop");
-        var delivery = document.getElementById("dropdown-delivery").classList.remove("showDrop");
-        var description = document.getElementById("dropdown-description").classList.remove("showDrop");
-        var delivery = document.getElementById("dropdown-size").classList.remove("showDrop");
-    }
-
-    function showDelivery(){
-        var delivery = document.getElementById("dropdown-delivery").classList.toggle("showDrop");
-        var description = document.getElementById("dropdown-description").classList.remove("showDrop");
-        var delivery = document.getElementById("dropdown-size").classList.remove("showDrop");
-        var wash = document.getElementById("dropdown-wash").classList.remove("showDrop");
-    }
 </script>
 
 </body>
