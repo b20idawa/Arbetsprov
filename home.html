@@ -820,8 +820,21 @@ input[type=submit] {
                 content.style.display = "none";
             } else {
                 content.style.display = "block";
+                accordion[i].style.display = "none";
             }
         });
+    }
+
+    var size = document.getElementsByClassName("sizeBox");
+    var i;
+    
+    for (i = 0; i < size.length; i++) {
+        size[i].addEventListener("click", function() {
+            size[0].classList.remove("active");
+            size[1].classList.remove("active");
+            size[2].classList.remove("active");
+            this.classList.toggle("active");
+         });
     }
     
 </script>
