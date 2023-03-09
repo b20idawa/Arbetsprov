@@ -356,6 +356,7 @@ input[type=submit] {
     margin-bottom: 1%; 
     color: #404040;
     align-items: center;
+    margin-top: 7%;
 }
 .productHeadRight {
     display: flex;
@@ -539,8 +540,7 @@ input[type=submit] {
     .right{
         display: flex;
         flex-direction: column;
-    }
-    
+    }    
 }
 
 @media screen and (max-width: 500px){
@@ -564,10 +564,31 @@ input[type=submit] {
     float: none;
     display: block;
     text-align: left;
+    font-size: 1rem;
   }
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1450px) {
+    .productRightText {
+        margin: 0;
+    }
+    
+}
+@media screen and (max-width: 1250px) {
+    .dropBtn{
+        padding: 5px;
+        padding-top: 0; 
+        padding-bottom: 0;
+    }
+}
 
+@media screen and (max-width: 1050px) {
+    .mainProduct {
+        display: flex;
+        flex-direction: column;
+    }
+    .mainProductLeft, .mainProductRight {
+        width: 100%;
+    }
 }
 </style>
 </head>
@@ -619,10 +640,10 @@ input[type=submit] {
             <p class="stock"><i style="font-size:24px; color: #52c454"; class="fa">&#xf00c;</i>FINNS I LAGER</p>
         </div>
         <img src="Hackett.png" style="width: 100px;">
-        <p>HACKETT GARMENT DYED OXFORD SLIM</p>
-        <P>FIT SHIRT WHITE</P>
+        <p class="productRightText">HACKETT GARMENT DYED OXFORD SLIM</p>
+        <P class="productRightText">FIT SHIRT WHITE</P>
         <p class="price">999 kr</p>
-        <p>VÄLJ STORLEK</p>
+        <p class="productRightText">VÄLJ STORLEK</p>
         <div class="size">
             <p class="sizeBox active">S</p>
             <p class="sizeBox">M</p>
