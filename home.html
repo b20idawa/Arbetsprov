@@ -473,7 +473,7 @@ input[type=submit] {
     display: none !important;
 }
 
-.test {
+.content-active {
     display: block;
 }
 
@@ -814,21 +814,18 @@ input[type=submit] {
 
     for (i = 0; i < accordion.length; i++) {
         accordion[i].addEventListener("click", function() {
+            var content = this.nextElementSibling;
             var accordionContent = document.getElementsByClassName("dropdown-content");
             var j;
             for (j = 0; j < accordionContent.length; j++) {
-                accordionContent[0].style.display = "none";
-                accordionContent[1].style.display = "none";
-                accordionContent[2].style.display = "none";
-                accordionContent[3].style.display = "none";
-            }
-            var content = this.nextElementSibling;
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = "block";  
-            }
+                accordionContent[0].classList.remove("content-active");
+                accordionContent[1].classList.remove("content-active");
+                accordionContent[2].classList.remove("content-active");
+                accordionContent[3].classList.remove("content-active");
+                content.classList.toggle("content-active");
+            }   
         });
+        
     }
 
     var size = document.getElementsByClassName("sizeBox");
