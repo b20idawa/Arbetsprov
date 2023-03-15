@@ -2,7 +2,7 @@
 <html lang="sv">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/d39f9ee5aa.js" crossorigin="anonymous"></script>
 <style>
     :root{
         --primary-color: #1a1919;
@@ -113,6 +113,7 @@
         flex-direction: column;
         align-items: center;
         font-size: 0.7rem;
+        padding: 10%;
     }
     .listHead {
         font-size: 0.9rem;
@@ -130,6 +131,9 @@
         display: flex;
         flex-direction: column;
         margin-left: 50%;
+        text-align: left;
+        margin: 0;
+ 
     
     }
 
@@ -180,6 +184,7 @@
     }
     .copyrightText {
         font-size: 0.4rem;
+        margin-bottom: 20px;
     }
     .hrElement{
         color: var(--beige-color);
@@ -360,6 +365,7 @@
         justify-content: flex-end;
         width: 220px;
         align-items: center;
+        text-align: end;
     }
     .mainProduct{
         display: flex;
@@ -621,7 +627,7 @@
     <a id="logo" class="test"><p>LOGO</p></a>
     <a href="#sok">SÖK</a>
     <a href="#lista">LISTA</a>
-    <a href="#kundkorg">KUNDKORG</a>
+    <a href="#kundkorg">KUNDKORG <i font-size="font-size: 1rem;" class="fa fa-cart-shopping"></i></a>
     <a onclick="navBarFunction();" class="icon">
         <i class="fa fa-bars"></i>
     </a>
@@ -694,8 +700,7 @@
             <p>MER FRÅN HACKET LONDON</p>
         </div>
     <div class="productHeadRight">
-        <p style="margin-right: 10%;">SE ALLA HACKET PRODUKTER</P>
-        <p style="font-size: 1rem;">&rang;</P>
+        <p>SE ALLA HACKET PRODUKTER <i class="fa-solid fa-chevron-right"></i></P>
         </p>
     </div>  
     </div>
