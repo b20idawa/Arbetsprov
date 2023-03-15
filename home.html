@@ -814,6 +814,7 @@
     </footer>
 
     <script>
+        //function that collapse navbar in smaller screens
         function navBarFunction() {
             var x = document.getElementById("nav");
             if (x.className === "navBar") {
@@ -824,6 +825,7 @@
             document.getElementById("logo").classList.toggle("logoSwitch");  
         }
         
+        //an accordion that shows one div with information about the product at a time
         var accordion = document.getElementsByClassName("dropBtn");
         var i;
 
@@ -842,6 +844,7 @@
             });    
         }
 
+        //function that make one size column active at a time
         var size = document.getElementsByClassName("sizeBox");
         var i;
         for (i = 0; i < size.length; i++) {
@@ -853,6 +856,7 @@
             });
         } 
 
+        //function that make a slideshow of the mainproduct
         let slideIndex = 0;
 
         function showSlides() {
