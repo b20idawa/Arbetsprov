@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="sv">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+:root{
+    --primary-color: #1a1919;
+    --grey-color: #dbdbdb;
+    --beige-color: #ebebe8
+}
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -32,15 +37,13 @@ p{
 }
 
 .navBar a:hover {
-  background-color: #ddd;
+  background-color: var(--grey-color);
   color: black;
 }
 
 .navBar .icon {
   display: none;
 }
-
-
 
 #logo {
     display: flex;
@@ -51,7 +54,7 @@ p{
     font-size: 1.4rem;
     margin-left: 5%;
     margin-right: 5%;
-    background-color: lightgrey;
+    background-color:var(--grey-color);
 }
 
 
@@ -59,8 +62,8 @@ p{
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    background-color: #1a1919;
-    color: #dbdbdb;
+    background-color: var(--primary-color);
+    color: var(--grey-color);
     font-size: 0.5rem;
 }
 .topBarStart{
@@ -86,7 +89,7 @@ p{
     justify-content: end;
 }
 .topLinks {
-    color: #dbdbdb;
+    color: var(--grey-color);
     text-decoration: none;
 }
 
@@ -103,11 +106,11 @@ p{
 }
 
 footer {
-  background-color: #1a1919;
+  background-color: var(--primary-color);
   overflow: hidden;
   bottom: 0;
   width: 100%;
-  color: #dbdbdb;
+  color: var(--grey-color);
 }
 .divInfo {
     display: grid;
@@ -151,7 +154,7 @@ ul li {
     padding: 2%;
 }
 .socialSection {
-    background-color: #ebebe8;
+    background-color: var(--beige-color);
     height: 80px;
     width: 80%;
     margin: auto;
@@ -160,7 +163,7 @@ ul li {
     align-items: center;
 }
 .socialBtns {
-    background-color: #ebebe8;
+    background-color: var(--beige-color);;
     border: 1px solid black;
     padding: 15px 32px;
     text-align: center;
@@ -174,7 +177,7 @@ ul li {
     height: 30px;
 }
 .footerSocial {
-    background-color: #ebebe8;
+    background-color: var(--beige-color);;
 }
 hr {
     width: 80%;
@@ -183,7 +186,7 @@ hr {
 footer p {
     text-align: center;
     font-size: 0.6rem;
-    color: #b0b0b0;
+    color: var(--grey-color);
     opacity: 70%;
     width: 50%;
     margin: auto;
@@ -287,7 +290,7 @@ input[type=text], select {
 }
  
 input[type=submit] {
-    background-color: #17181f;
+    background-color: var(--primary-color);
     color: white;
     padding: 11px 20px;
     margin: 8px 0;
@@ -384,7 +387,7 @@ input[type=submit] {
     margin: 0 auto;
 }  
 .active{
-    background-color: #17181f;
+    background-color: var(--primary-color);
     color: white;
 }
 .sizeBox {
@@ -393,7 +396,7 @@ input[type=submit] {
     width: 20px;
 }
 .shopBtn {
-    background-color: #17181f;
+    background-color: var(--primary-color);
     border: none;
     color: white;
     padding: 15px 32px;
@@ -425,7 +428,7 @@ input[type=submit] {
     background: none;
     color: black;
     padding: 10px;
-    border-top: 1px solid #17181f;
+    border-top: 1px solid var(--primary-color);
     opacity: 50%;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -589,6 +592,9 @@ input[type=submit] {
     .mainProductLeft, .mainProductRight {
         width: 100%;
     }
+}
+.hrElement{
+    color: var(--beige-color);
 }
 </style>
 </head>
@@ -809,11 +815,11 @@ input[type=submit] {
         </div>
     </div>
 
-    <hr size= "1" color= "#ebebe8">
+    <hr size= "1" class="hrElement">
 
     <p class="aboutText">Detta är lite text som beskriver företaget för sökmotorer vilket reulterar i att vi rankar högre. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet porttitor dui. Nunc tincidunt diam lorem, quis fringilla elit facilisis vitae. Aliquam erat volutpat. Nullam sit amet dui condimentum, iaculis lorem nec, mollis lorem. Fusce venenatis, tellus et porttitor efficitur, dolor elit pulvinar libero, at rutrum diam urna nec orci. Nunc pellentesque dui non lorem auctor, et condimentum nisi tempor. Suspendisse potenti. Praesent consectetur sodales venenatis. Nam lobortis mauris quam, euismod dignissim metus pulvinar at. Sed eleifend arcu sit amet mauris ultrices mattis.</p>
 
-    <hr size= "1" color= "#ebebe8">
+    <hr size= "1" class="hrElement">
 
     <p class="copyrightText">VISTRÖM WEBB AB &copy; 2017. ALLA RÄTTIGHETER RESERVERADE</p>
 </footer>
