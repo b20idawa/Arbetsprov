@@ -600,274 +600,244 @@ input[type=submit] {
 </head>
 <body>
     
-<div class="topBar">
-    <div class="topBarStart">
-        <div class="topBarLeft">
-            <p>FRI FRAKT & FRIA RETURER</p>
-            <p>1-3 DAGAR LEVERANS</p>
+    <div class="topBar">
+        <div class="topBarStart">
+            <div class="topBarLeft">
+                <p>FRI FRAKT & FRIA RETURER</p>
+                <p>1-3 DAGAR LEVERANS</p>
+            </div>
         </div>
-        
+        <div class="topBarEnd">
+            <div class="topBarRight">
+                <p><a href="#" class="topLinks">BLOGG</a></p>
+                <p><a href="#" class="topLinks">MITT KONTO</a></p>
+                <p><a href="#" class="topLinks">KUNDTJÄNST</a></p>
+            </div>   
+        </div>
+    </div>
 
+    <div class="navBar" id="nav">
+    <a href="#herr">HERR</a>
+    <a href="#dam">DAM</a>
+    <a href="#marken">MÄRKEN</a>
+    <a href="#rea">REA</a>
+    <a id="logo" class="test"><p>LOGO</p></a>
+    <a href="#sok">SÖK</a>
+    <a href="#lista">LISTA</a>
+    <a href="#kundkorg">KUNDKORG</a>
+    <a onclick="navBarFunction();" class="icon">
+        <i class="fa fa-bars"></i>
+    </a>
     </div>
-    <div class="topBarEnd">
-        <div class="topBarRight">
-            <p><a href="#" class="topLinks">BLOGG</a></p>
-            <p><a href="#" class="topLinks">MITT KONTO</a></p>
-            <p><a href="#" class="topLinks">KUNDTJÄNST</a></p>
+
+    <div class="mainProduct">
+        <div class="mainProductLeft">
+            <img src="main.jpeg" alt="" style="width:100%">
         </div>
-        
-        
-    </div>
     
-
-</div>
-<div class="navBar" id="nav">
-  <a href="#herr">HERR</a>
-  <a href="#dam">DAM</a>
-  <a href="#marken">MÄRKEN</a>
-  <a href="#rea">REA</a>
-  <a id="logo" class="test"><p>LOGO</p></a>
-  <a href="#sok">SÖK</a>
-  <a href="#lista">LISTA</a>
-  <a href="#kundkorg">KUNDKORG</a>
-  <a onclick="navBarFunction();" class="icon">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
-
-<div class="mainProduct">
-    <div class="mainProductLeft">
-        <img src="main.jpeg" alt="" style="width:100%">
-    </div>
-   
-    <div class="mainProductRight">
-        <div class="productDetails">
-            <p class="new">Nyhet</p>
-            <p class="stock"><i style="font-size:24px; color: #52c454"; class="fa">&#xf00c;</i>FINNS I LAGER</p>
-        </div>
-        <img src="Hackett.png" style="width: 100px;">
-        <p class="productRightText">HACKETT GARMENT DYED OXFORD SLIM</p>
-        <P class="productRightText">FIT SHIRT WHITE</P>
-        <p class="price">999 kr</p>
-        <p class="productRightText">VÄLJ STORLEK</p>
-        <div class="size">
-            <p class="sizeBox active">S</p>
-            <p class="sizeBox">M</p>
-            <p class="sizeBox">L</p>
-        </div>
-        <button class="shopBtn">LÄGG I VARUKORG</button>
-        <div class="article">
-            <p>ARTIKELNUMMER:</p>
-            <p> HM3049975AL</p>
-        </div>
-        <div class="dropDown">
-            <button class="dropBtn">PRODUKTBESKRIVNING<i class="fa fa-angle-down" style="font-size:25px"></i></button>
-            <div class="dropdown-content">
-             Detta är lite text som berättar om produkten
+        <div class="mainProductRight">
+            <div class="productDetails">
+                <p class="new">Nyhet</p>
+                <p class="stock"><i style="font-size:24px; color: #52c454"; class="fa">&#xf00c;</i>FINNS I LAGER</p>
             </div>
-        
-            <button class="dropBtn">STORLEK & PASSFORM<i class="fa fa-angle-down" style="font-size:25px"></i></button>
-            <div class="dropdown-content">
-             Detta är lite text som berättar om produkten
-            </div>
-        
-            <button class="dropBtn">TVÄTT & SKÖTSELRÅD<i class="fa fa-angle-down" style="font-size:25px"></i></button>
-            <div  class="dropdown-content">
-             Detta är lite text som berättar om produkten
-            </div>
-       
-            <button class="dropBtn">LEVERNAS & RETUR<i class="fa fa-angle-down" style="font-size:25px"></i></button>
-            <div class="dropdown-content">
-             Detta är lite text som berättar om produkten
-            </div>
-        </div>
-        <hr class="hrMain" size= "1" color= "#17181f">
-        
-    </div>
-</div>
-
-<div class="productHead">
-    <div>
-        <p>MER FRÅN HACKET LONDON</p>
-    </div>
-   <div class="productHeadRight">
-    <p style="margin-right: 10%;">SE ALLA HACKET PRODUKTER</P>
-    <p style="font-size: 1rem;">&rang;</P>
-    </p>
-   </div>
-    
-</div>
-<div class="products">
-    <div class="card">
-        <div class="cardNew-container">
-            <p style="margin: 0;" class="cardNew">NYHET</p>
-        </div>
-        <img src="bild1.jpeg" alt="" style="width:100%">
-        <h4>HACKETT LONDON</h4>
-        
-        <p class="cardDescription">Hacket Garment Dyed Oxford Slim Fit Shirt White</p>
-        <div class="cardInfo">
+            <img src="Hackett.png" style="width: 100px;">
+            <p class="productRightText">HACKETT GARMENT DYED OXFORD SLIM</p>
+            <P class="productRightText">FIT SHIRT WHITE</P>
             <p class="price">999 kr</p>
-        </div>
+            <p class="productRightText">VÄLJ STORLEK</p>
+            <div class="size">
+                <p class="sizeBox active">S</p>
+                <p class="sizeBox">M</p>
+                <p class="sizeBox">L</p>
+            </div>
+            <button class="shopBtn">LÄGG I VARUKORG</button>
+            <div class="article">
+                <p>ARTIKELNUMMER:</p>
+                <p> HM3049975AL</p>
+            </div>
+            <div class="dropDown">
+                <button class="dropBtn">PRODUKTBESKRIVNING<i class="fa fa-angle-down" style="font-size:25px"></i></button>
+                <div class="dropdown-content">
+                Detta är lite text som berättar om produkten
+                </div>
+            
+                <button class="dropBtn">STORLEK & PASSFORM<i class="fa fa-angle-down" style="font-size:25px"></i></button>
+                <div class="dropdown-content">
+                Detta är lite text som berättar om produkten
+                </div>
+            
+                <button class="dropBtn">TVÄTT & SKÖTSELRÅD<i class="fa fa-angle-down" style="font-size:25px"></i></button>
+                <div  class="dropdown-content">
+                Detta är lite text som berättar om produkten
+                </div>
         
-    </div>
-
-    <div class="card">
-        <div class="cardSale-container">
-            <p style="margin: 0;" class="cardSale">KAMPANJ</p>
-        </div>
-        <img src="bild2.jpeg" alt="" style="width:100%">
-        <h4>HACKETT LONDON</h4>
-        
-        <p class="cardDescription">Hacket Garment Dyed Oxford Slim Fit Shirt White</p>
-        <div class="cardInfo">
-            <p class="price">999 kr</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <img src="bild3.jpeg" alt="" style="width:100%">
-        <h4>HACKETT LONDON</h4>
-        
-        <p class="cardDescription">Hacket Garment Dyed Oxford Slim Fit Shirt White</p>
-        <div class="cardInfo"> 
-            <p class="price sale">999 kr</p>    
-        </div>
-    </div>
-
-    <div class="card">
-        <img src="bild4.jpeg" alt="" style="width:100%">
-        <h4>HACKETT LONDON</h4>
-        
-        <p class="cardDescription">Hacket Garment Dyed Oxford Slim Fit Shirt White</p>
-        <div class="cardInfo">
-            <p class="price">999 kr</p>
-        </div>
-    </div>
-</div>
-
-
-<div class="newsletterDiv">
-   
-    <div class="newsletterLeft">
-        <div class="left">
-            <p class="newsletterHeading">FA DET SENASTE</p>
-            <p class="newsletterText">Join our mailing list to stay up to date on new arrivals, promotions and all things</p>
-        </div>
-        
-        
-        <form action="" class="right">
-            <input type="text" name="signUp" placeholder="E-POSTADRESS">
-            <input type="submit" value="Skicka">
-        </form> 
-    </div> 
-   
-    <img src="newsletter_bg.jpeg" alt="" style="width:100%;"> 
-</div>
-
-
-<footer>
-    <div class="footerSocial">
-        <div class="socialSection">
-            <button class="socialBtns">FACEBOOK</button>
-            <button class="socialBtns">INSTAGRAM</button>
-            <button class="socialBtns">NYHETSBREV</button>
-        </div>
-    </div>
-    
-    <div class="divInfo">
-        <div class="infoSection">
-            <ul>
-                <li class="listHead">SHOP</li>
-                <li>Herr</li>
-                <li>Dam</li>
-                <li>Märken</li>
-                <li>Rea</li>
-            </ul>
-        </div>
-
-        <div class="infoSection">
-            <ul>
-                <li class="listHead">KUNDSERVICE</li>
-                <li>Order</li>
-                <li>Betalning</li>
-                <li>Frakt & Leverans</li>
-                <li>Returer</li>
-            </ul>
-        </div>
-
-        <div class="infoSection" style="margin: 0;">
-            <ul>
-                <li class="listHead">KONTAKT</li>
-                <li class="listContact">KONTAKTUPPGIFTER</li>
-                <li>TEL: 0700 00 00 00</li>
-                <li>E-POST: info@foretaget.se</li>
-            </ul>
-        </div>
-    
-
-        <div class="infoSection">
-            <ul>
-                <li class="listContact">VISTRÖM WEBB AB</li>
-                <li>KUNGSGATAN 9</li>
-                <li>541 31 SKÖVDE</li>
-            </ul>
+                <button class="dropBtn">LEVERNAS & RETUR<i class="fa fa-angle-down" style="font-size:25px"></i></button>
+                <div class="dropdown-content">
+                Detta är lite text som berättar om produkten
+                </div>
+            </div>
+            <hr class="hrMain" size= "1" color= "#17181f">  
         </div>
     </div>
 
-    <hr size= "1" class="hrElement">
+    <div class="productHead">
+        <div>
+            <p>MER FRÅN HACKET LONDON</p>
+        </div>
+    <div class="productHeadRight">
+        <p style="margin-right: 10%;">SE ALLA HACKET PRODUKTER</P>
+        <p style="font-size: 1rem;">&rang;</P>
+        </p>
+    </div>  
+    </div>
 
-    <p class="aboutText">Detta är lite text som beskriver företaget för sökmotorer vilket reulterar i att vi rankar högre. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet porttitor dui. Nunc tincidunt diam lorem, quis fringilla elit facilisis vitae. Aliquam erat volutpat. Nullam sit amet dui condimentum, iaculis lorem nec, mollis lorem. Fusce venenatis, tellus et porttitor efficitur, dolor elit pulvinar libero, at rutrum diam urna nec orci. Nunc pellentesque dui non lorem auctor, et condimentum nisi tempor. Suspendisse potenti. Praesent consectetur sodales venenatis. Nam lobortis mauris quam, euismod dignissim metus pulvinar at. Sed eleifend arcu sit amet mauris ultrices mattis.</p>
+    <div class="products">
+        <div class="card">
+            <div class="cardNew-container">
+                <p style="margin: 0;" class="cardNew">NYHET</p>
+            </div>
+            <img src="bild1.jpeg" alt="" style="width:100%">
+            <h4>HACKETT LONDON</h4>
+            <p class="cardDescription">Hacket Garment Dyed Oxford Slim Fit Shirt White</p>
+            <div class="cardInfo">
+                <p class="price">999 kr</p>
+            </div> 
+        </div>
 
-    <hr size= "1" class="hrElement">
+        <div class="card">
+            <div class="cardSale-container">
+                <p style="margin: 0;" class="cardSale">KAMPANJ</p>
+            </div>
+            <img src="bild2.jpeg" alt="" style="width:100%">
+            <h4>HACKETT LONDON</h4>
+            <p class="cardDescription">Hacket Garment Dyed Oxford Slim Fit Shirt White</p>
+            <div class="cardInfo">
+                <p class="price">999 kr</p>
+            </div>
+        </div>
 
-    <p class="copyrightText">VISTRÖM WEBB AB &copy; 2017. ALLA RÄTTIGHETER RESERVERADE</p>
-</footer>
-<script>
-    function navBarFunction() {
-        var x = document.getElementById("nav");
-        if (x.className === "navBar") {
-            x.className += " responsive";
-        } else {
-            x.className = "navBar";
+        <div class="card">
+            <img src="bild3.jpeg" alt="" style="width:100%">
+            <h4>HACKETT LONDON</h4>
+            <p class="cardDescription">Hacket Garment Dyed Oxford Slim Fit Shirt White</p>
+            <div class="cardInfo"> 
+                <p class="price sale">999 kr</p>    
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="bild4.jpeg" alt="" style="width:100%">
+            <h4>HACKETT LONDON</h4>
+            <p class="cardDescription">Hacket Garment Dyed Oxford Slim Fit Shirt White</p>
+            <div class="cardInfo">
+                <p class="price">999 kr</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="newsletterDiv">
+        <div class="newsletterLeft">
+            <div class="left">
+                <p class="newsletterHeading">FA DET SENASTE</p>
+                <p class="newsletterText">Join our mailing list to stay up to date on new arrivals, promotions and all things</p>
+            </div>
+            <form action="" class="right">
+                <input type="text" name="signUp" placeholder="E-POSTADRESS">
+                <input type="submit" value="Skicka">
+            </form> 
+        </div> 
+        <img src="newsletter_bg.jpeg" alt="" style="width:100%;"> 
+    </div>
+
+    <footer>
+        <div class="footerSocial">
+            <div class="socialSection">
+                <button class="socialBtns">FACEBOOK</button>
+                <button class="socialBtns">INSTAGRAM</button>
+                <button class="socialBtns">NYHETSBREV</button>
+            </div>
+        </div>
+        
+        <div class="divInfo">
+            <div class="infoSection">
+                <ul>
+                    <li class="listHead">SHOP</li>
+                    <li>Herr</li>
+                    <li>Dam</li>
+                    <li>Märken</li>
+                    <li>Rea</li>
+                </ul>
+            </div>
+            <div class="infoSection">
+                <ul>
+                    <li class="listHead">KUNDSERVICE</li>
+                    <li>Order</li>
+                    <li>Betalning</li>
+                    <li>Frakt & Leverans</li>
+                    <li>Returer</li>
+                </ul>
+            </div>
+            <div class="infoSection" style="margin: 0;">
+                <ul>
+                    <li class="listHead">KONTAKT</li>
+                    <li class="listContact">KONTAKTUPPGIFTER</li>
+                    <li>TEL: 0700 00 00 00</li>
+                    <li>E-POST: info@foretaget.se</li>
+                </ul>
+            </div>
+            <div class="infoSection">
+                <ul>
+                    <li class="listContact">VISTRÖM WEBB AB</li>
+                    <li>KUNGSGATAN 9</li>
+                    <li>541 31 SKÖVDE</li>
+                </ul>
+            </div>
+        </div>
+        <hr size= "1" class="hrElement">
+        <p class="aboutText">Detta är lite text som beskriver företaget för sökmotorer vilket reulterar i att vi rankar högre. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet porttitor dui. Nunc tincidunt diam lorem, quis fringilla elit facilisis vitae. Aliquam erat volutpat. Nullam sit amet dui condimentum, iaculis lorem nec, mollis lorem. Fusce venenatis, tellus et porttitor efficitur, dolor elit pulvinar libero, at rutrum diam urna nec orci. Nunc pellentesque dui non lorem auctor, et condimentum nisi tempor. Suspendisse potenti. Praesent consectetur sodales venenatis. Nam lobortis mauris quam, euismod dignissim metus pulvinar at. Sed eleifend arcu sit amet mauris ultrices mattis.</p>
+        <hr size= "1" class="hrElement">
+        <p class="copyrightText">VISTRÖM WEBB AB &copy; 2017. ALLA RÄTTIGHETER RESERVERADE</p>
+    </footer>
+
+    <script>
+        function navBarFunction() {
+            var x = document.getElementById("nav");
+            if (x.className === "navBar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navBar";
+            }
+            document.getElementById("logo").classList.toggle("logoSwitch");  
         }
-        document.getElementById("logo").classList.toggle("logoSwitch");
         
-    }
-    
+        var accordion = document.getElementsByClassName("dropBtn");
+        var i;
 
-    var accordion = document.getElementsByClassName("dropBtn");
-    var i;
+        for (i = 0; i < accordion.length; i++) {
+            accordion[i].addEventListener("click", function() {
+                var content = this.nextElementSibling;
+                var accordionContent = document.getElementsByClassName("dropdown-content");
+                var j;
+                for (j = 0; j < accordionContent.length; j++) {
+                    accordionContent[0].classList.remove("content-active");
+                    accordionContent[1].classList.remove("content-active");
+                    accordionContent[2].classList.remove("content-active");
+                    accordionContent[3].classList.remove("content-active");
+                    content.classList.toggle("content-active");
+                }   
+            });    
+        }
 
-    for (i = 0; i < accordion.length; i++) {
-        accordion[i].addEventListener("click", function() {
-            var content = this.nextElementSibling;
-            var accordionContent = document.getElementsByClassName("dropdown-content");
-            var j;
-            for (j = 0; j < accordionContent.length; j++) {
-                accordionContent[0].classList.remove("content-active");
-                accordionContent[1].classList.remove("content-active");
-                accordionContent[2].classList.remove("content-active");
-                accordionContent[3].classList.remove("content-active");
-                content.classList.toggle("content-active");
-            }   
-        });
-        
-    }
-
-    var size = document.getElementsByClassName("sizeBox");
-    var i;
-
-    for (i = 0; i < size.length; i++) {
-        size[i].addEventListener("click", function() {
-            size[0].classList.remove("active");
-            size[1].classList.remove("active");
-            size[2].classList.remove("active");
-            this.classList.toggle("active");
-         });
-    }
-    
-</script>
-
+        var size = document.getElementsByClassName("sizeBox");
+        var i;
+        for (i = 0; i < size.length; i++) {
+            size[i].addEventListener("click", function() {
+                size[0].classList.remove("active");
+                size[1].classList.remove("active");
+                size[2].classList.remove("active");
+                this.classList.toggle("active");
+            });
+        } 
+    </script>
 </body>
 </html>
