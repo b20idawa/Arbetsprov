@@ -335,6 +335,26 @@
         align-items: center;
         margin-top: 7%;
     }
+    .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: var(--grey-color);
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+    .slideActive {
+        background-color: var(--primary-color);
+    }
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+    }
     .productHeadRight {
         display: flex;
         justify-content: flex-end;
@@ -547,6 +567,9 @@
             text-align: left;
             font-size: 1rem;
         }
+        .socialBtns{
+            padding: 10px 14px;
+        }
     }
     @media screen and (max-width: 1450px) {
         .productRightText {
@@ -572,7 +595,7 @@
     } 
 </style>
 </head>
-<body>
+<body onload="showSlides();">
     
     <div class="topBar">
         <div class="topBarStart">
@@ -605,10 +628,22 @@
     </div>
 
     <div class="mainProduct">
-        <div class="mainProductLeft">
-            <img src="main.jpeg" alt="" style="width:100%">
+        <div class="slideshow-container mainProductLeft">
+            <div class="slides fade">
+              <img src="main.jpeg" alt="" style="width:100%">
+            </div>
+            <div class="slides fade">
+              <img src="main.jpeg" alt="" style="width:100%">
+            </div>
+            <div class="slides fade">
+              <img src="main.jpeg" alt="" style="width:100%">
+            </div>
+            <div style="text-align:center">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+            </div>
         </div>
-    
         <div class="mainProductRight">
             <div class="productDetails">
                 <p class="new">Nyhet</p>
@@ -812,6 +847,25 @@
                 this.classList.toggle("active");
             });
         } 
+
+        let slideIndex = 0;
+
+        function showSlides() {
+            let y;
+            let slides = document.getElementsByClassName("slides");
+            let dots = document.getElementsByClassName("dot");
+            for (y = 0; y < slides.length; y++) {
+                slides[y].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (y = 0; y < dots.length; y++) {
+                dots[y].className = dots[y].className.replace(" slideActive", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " slideActive";
+            setTimeout(showSlides, 3000); 
+        }
     </script>
 </body>
 </html>
