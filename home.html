@@ -51,6 +51,9 @@
         margin-right: 5%;
         background-color:var(--grey-color);
     }
+    .logo p {
+        cursor: pointer;
+    }
     .topBar {
         display: flex;
         justify-content: space-between;
@@ -636,7 +639,7 @@
     <a href="#dam">DAM</a>
     <a href="#marken">MÄRKEN</a>
     <a href="#rea">REA</a>
-    <a class="logo"><p>LOGO</p></a>
+    <a href="home.html" class="logo"><p>LOGO</p></a>
     <a href="#sok">SÖK</a>
     <a href="#lista">LISTA</a>
     <a href="#kundkorg">KUNDKORG <i font-size="font-size: 1rem;" class="fa fa-cart-shopping"></i></a>
@@ -841,6 +844,10 @@
     </footer>
 
     <script>
+        //function that add sale
+        const sale = document.getElementsByClassName("cardInfo")[1];
+        sale.classList.toggle("sales");
+         
         //function that collapse navbar in smaller screens
         function navBarFunction() {
             var x = document.getElementById("nav");
