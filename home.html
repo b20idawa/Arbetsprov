@@ -165,8 +165,12 @@
         height: 30px;
         cursor: pointer;
     }
+    .socialBtns:active{
+        background-color: var(--primary-color);
+        color: white;
+    }
     .footerSocial {
-        background-color: var(--beige-color);;
+        background-color: var(--beige-color);
     }
     hr {
         width: 80%;
@@ -369,6 +373,9 @@
         align-items: center;
         text-align: end;
     }
+    .productHeadRight p {
+        cursor: pointer;
+    }
     .mainProduct{
         display: flex;
         margin-bottom: 5%;
@@ -408,6 +415,10 @@
         font-size: 16px;
         margin: 4px 2px;
         cursor: pointer;
+    }
+    .shopBtn:active{
+        background-color: var(--grey-color);
+        color: var(--primary-color);
     }
     .article {
         display: flex;
@@ -716,10 +727,9 @@
         <div>
             <p>MER FRÅN HACKET LONDON</p>
         </div>
-    <div class="productHeadRight">
-        <p>SE ALLA HACKET PRODUKTER <i class="fa-solid fa-chevron-right"></i></P>
-        </p>
-    </div>  
+        <div class="productHeadRight">
+            <p>SE ALLA HACKET PRODUKTER <i class="fa-solid fa-chevron-right"></i></p>
+        </div>  
     </div>
 
     <div class="products">
