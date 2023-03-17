@@ -433,14 +433,10 @@
         padding-bottom: 2%;
         align-items: center;
     }
-    .dropdown-content{
-        display: none;
+    .text{
+        float: left;
+        margin: 2%;
         text-align: left;
-        margin: 1%;
-        height: 100px;
-    }
-    .showDrop{
-        display: block;
     }
     .productDetails {
         display: flex;
@@ -474,9 +470,10 @@
     .logoSwitch {
         display: none !important;
     }
-    .content-active {
-        display: block;
+    .hideText{
+        display: none;
     }
+
     @media screen and (max-width: 450px) {
         .topBar {
             flex-direction: column;
@@ -670,25 +667,41 @@
                 <p>ARTIKELNUMMER:</p>
                 <p> HM3049975AL</p>
             </div>
-            <div class="dropDown">
-                <button class="dropBtn">PRODUKTBESKRIVNING<i class="fa fa-angle-down" style="font-size:25px"></i></button>
-                <div class="dropdown-content">
-                Detta är lite text som berättar om produkten
-                </div>
-            
-                <button class="dropBtn">STORLEK & PASSFORM<i class="fa fa-angle-down" style="font-size:25px"></i></button>
-                <div class="dropdown-content">
-                Detta är lite text som berättar om produkten
-                </div>
-            
-                <button class="dropBtn">TVÄTT & SKÖTSELRÅD<i class="fa fa-angle-down" style="font-size:25px"></i></button>
-                <div  class="dropdown-content">
-                Detta är lite text som berättar om produkten
-                </div>
         
-                <button class="dropBtn">LEVERNAS & RETUR<i class="fa fa-angle-down" style="font-size:25px"></i></button>
-                <div class="dropdown-content">
-                Detta är lite text som berättar om produkten
+            <div class="dropDown">
+                <div class="dropDownDiv">
+                    <div class="dropDownHeading">
+                        <button class="dropBtn">PRODUKTBESKRIVNING<i class="fa fa-angle-down" style="font-size:25px"></i></button>
+                    </div>
+                    <div class="dropDownText hideText">
+                        <p class="text">Detta är lite text som berättar om produkten</p>
+                    </div>
+                </div>
+               
+                <div class="dropDownDiv">
+                    <div class="dropDownHeading">
+                        <button class="dropBtn">STORLEK & PASSFORM<i class="fa fa-angle-down" style="font-size:25px"></i></button>
+                    </div>
+                    <div class="dropDownText hideText">
+                        <p class="text">Detta är lite text som berättar om produkten</p>
+                    </div>
+                </div>
+                
+                <div class="dropDownDiv">
+                    <div class="dropDownHeading">
+                        <button class="dropBtn">TVÄTT & SKÖTSELRÅD<i class="fa fa-angle-down" style="font-size:25px"></i></button>
+                    </div>
+                    <div class="dropDownText hideText">
+                        <p class="text">Detta är lite text som berättar om produkten</p>
+                    </div>
+                </div>   
+                <div class="dropDownDiv">
+                    <div class="dropDownHeading">
+                        <button class="dropBtn">LEVERANS & RETUR<i class="fa fa-angle-down" style="font-size:25px"></i></button>
+                    </div>
+                    <div class="dropDownText hideText">
+                        <p class="text">Detta är lite text som berättar om produkten</p>
+                    </div>
                 </div>
             </div>
             <hr class="hrMain" size= "1" color= "#17181f">  
@@ -824,25 +837,6 @@
             }
             document.getElementById("logo").classList.toggle("logoSwitch");  
         }
-        
-        //an accordion that shows one div with information about the product at a time
-        var accordion = document.getElementsByClassName("dropBtn");
-        var i;
-
-        for (i = 0; i < accordion.length; i++) {
-            accordion[i].addEventListener("click", function() {
-                var content = this.nextElementSibling;
-                var accordionContent = document.getElementsByClassName("dropdown-content");
-                var j;
-                for (j = 0; j < accordionContent.length; j++) {
-                    accordionContent[0].classList.remove("content-active");
-                    accordionContent[1].classList.remove("content-active");
-                    accordionContent[2].classList.remove("content-active");
-                    accordionContent[3].classList.remove("content-active");
-                    content.classList.toggle("content-active");
-                }   
-            });    
-        }
 
         //function that make one size column active at a time
         var size = document.getElementsByClassName("sizeBox");
@@ -875,6 +869,33 @@
             dots[slideIndex-1].className += " slideActive";
             setTimeout(showSlides, 3000); 
         }
+
+
+
+
+        //an accordion that shows one div with information about the product at a time
+        const elements = document.querySelectorAll('.dropDownDiv');
+
+        elements.forEach(element =>{
+            let btn = element.querySelector('.dropDownHeading button');
+            let icon = element.querySelector('.dropDownHeading button i');
+            var text = element.lastElementChild;
+            var textDiv = document.querySelectorAll('.dropDownDiv .dropDownText');
+            btn.addEventListener('click', ()=>{
+                textDiv.forEach(ans =>{
+                    let ansIcon = ans.parentElement.querySelector('button i');
+                    if(text !== ans){
+                        ans.classList.add('hideText');
+                        ansIcon.className = 'fa fa-angle-down';
+                    }
+                });
+                text.classList.toggle('hideText');
+                icon.className === 'fa fa-angle-down' ? icon.className = 'fa fa-angle-up' 
+                : icon.className ='fa fa-angle-down';
+            });
+        });
+
+   
     </script>
 </body>
 </html>
