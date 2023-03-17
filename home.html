@@ -40,7 +40,7 @@
     .navBar .icon {
         display: none;
     }
-    #logo {
+    .logo {
         display: flex;
         justify-content: center;
         border: 1px solid black;
@@ -533,7 +533,7 @@
             float: right;
             display: block;
         }
-        #logo {
+        .logo {
             font-size: 0.8rem;
             width: 200px;
             
@@ -636,7 +636,7 @@
     <a href="#dam">DAM</a>
     <a href="#marken">MÄRKEN</a>
     <a href="#rea">REA</a>
-    <a id="logo" class="test"><p>LOGO</p></a>
+    <a class="logo"><p>LOGO</p></a>
     <a href="#sok">SÖK</a>
     <a href="#lista">LISTA</a>
     <a href="#kundkorg">KUNDKORG <i font-size="font-size: 1rem;" class="fa fa-cart-shopping"></i></a>
@@ -884,9 +884,6 @@
             setTimeout(showSlides, 3000); 
         }
 
-
-
-
         //an accordion that shows one div with information about the product at a time
         const elements = document.querySelectorAll('.dropDownDiv');
 
@@ -908,8 +905,6 @@
                 : icon.className ='fa fa-angle-down';
             });
         });
-
-   
     </script>
 </body>
 </html>
