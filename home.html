@@ -88,9 +88,6 @@
         color: var(--grey-color);
         text-decoration: none;
     }
-
-    
-
     footer {
         background-color: var(--primary-color);
         overflow: hidden;
@@ -136,8 +133,6 @@
         margin-left: 50%;
         text-align: left;
         margin: 0;
- 
-    
     }
 
     ul li {
@@ -530,16 +525,17 @@
             font-size: 1.3rem;;
         }
         .navBar{
-            display: block;
+            display: flex;
+            justify-content: space-between;
         }
         .navBar a.icon {
             float: right;
             display: block;
         }
-        .logo {
-            font-size: 0.8rem;
+        #logo {
             width: 200px;
-            
+            font-size: 0.8rem;
+            display: block;   
         } 
         input[type=submit] {
             padding: 11px 10px;
@@ -576,6 +572,7 @@
     @media screen and (max-width: 850px) {
         .navBar.responsive {
             position: relative;
+            display: block;
         }
         .navBar.responsive .icon {
             position: absolute;
@@ -639,7 +636,7 @@
     <a href="#dam">DAM</a>
     <a href="#marken">MÄRKEN</a>
     <a href="#rea">REA</a>
-    <a href="home.html" class="logo"><p>LOGO</p></a>
+    <a href="home.html" id="logo" class="logo"><p>LOGO</p></a>
     <a href="#sok">SÖK</a>
     <a href="#lista">LISTA</a>
     <a href="#kundkorg">KUNDKORG <i font-size="font-size: 1rem;" class="fa fa-cart-shopping"></i></a>
@@ -844,7 +841,7 @@
     </footer>
 
     <script>
-        //function that add sale
+        //function that add sale and "red" price
         const sale = document.getElementsByClassName("cardInfo")[1];
         sale.classList.toggle("sales");
          
